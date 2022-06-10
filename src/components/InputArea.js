@@ -12,6 +12,7 @@ const InputArea = ({ addTodo }) => {
     <div className="form">
       <input onChange={handleChange} type="text" value={inputText}/>
       <button
+      disabled={!inputText}
         onClick={() => {
           addTodo(inputText);
           setInputText("");
